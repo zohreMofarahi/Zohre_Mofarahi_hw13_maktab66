@@ -102,8 +102,9 @@
  Clone
               </button>
             </th>
+           
             <td><input type="text" class="py-2"></td>
-            <td><input type="text" class="py-2"></td>
+            <td ><input type="text" class="py-2"></td>
             <td>
               <div class="form-check form-check-inline py-2">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
@@ -148,10 +149,13 @@
           event.isPropagationStopped();
         });
        
-        $(' [type="radio"]').click ( function(){
-         
-          $(' [type="text"]').prop(check:checked);
-         
+       
+        $('[value="option3"]').click(function (){
+          $ ('[type="text"]').attr('disabled','disabled');
+        })
+
+        $('[value="option2"]').click(function (){
+          $ ('[type="text"]').removeAttr('disabled'); 
         })
     
    });
